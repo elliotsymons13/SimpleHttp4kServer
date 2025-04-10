@@ -3,7 +3,7 @@ package com.oocode
 class Answerer {
     fun answerFor(question: String): String {
         if (question.contains("name")) {
-            return "Elliot"
+            return "Yasin & Elliot"
         }
         if (question.contains("2")) {
             return "4"
