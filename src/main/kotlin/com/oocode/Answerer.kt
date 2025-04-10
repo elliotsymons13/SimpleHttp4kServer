@@ -4,18 +4,6 @@ class Answerer {
     fun answerFor(question: String): String {
         val words = question.split(" ")
 
-//        if (words.contains("+")||words.contains("/")||words.contains("*")||words.contains("-")) {
-//            words = words.filter { it.contains() }
-//        }
-
-
-//        What is 27 plus 97?
-        println(words)
-//        val left = words[2].toFloat()
-//        val right = (words[4].toFloat()).toString()
-
-     // Split the input string by spaces
-
         if (words.contains("plus")) {
             // Convert the numbers to floats and add them
             return (words[2].toInt() + words[4].dropLast(1).toInt()).toString()
@@ -33,17 +21,25 @@ class Answerer {
             return (words[2].toInt() * words[5].dropLast(1).toInt()).toString()
         }
 
-//        if (question.contains("largest")){
-//            var count = 0
-//            for (item in words){
-//                if (item[0] == item )){
-//                    if (count < item.toInt()) {
-//                        count = item.toInt()
-//                    }
-//                }
-//            }
-//            return count.toString()
-//            }
+
+
+
+
+        if (question.contains("largest")){
+            val largest = question.split(":")[1]
+            var numbers = largest.split(",").toMutableList()
+            var count = 0
+            println(numbers)
+            numbers[2] = numbers[2].dropLast(1)
+            for (item in numbers){
+                val num = item.trim().toInt()
+                if (count < num) {
+                    count = num
+                }
+
+            }
+            return count.toString()
+            }
 
 //        println(words.filter({it.contains("[0-9]")}).max())
 //        if (question.contains("largest")) {
