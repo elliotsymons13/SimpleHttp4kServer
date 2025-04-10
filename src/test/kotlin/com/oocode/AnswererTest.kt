@@ -11,14 +11,18 @@ class AnswererTest {
         val contents = Answerer().answerFor("What is your name?")
         assertThat(contents, equalTo("Yasin & Elliot"))
     }
-    @Disabled
     @Test
     fun `can pretend to do calculations`() {
-        val contents = Answerer().answerFor("What is 2 + 2?")
-        assertThat(contents, equalTo("4.0"))
+        val contents = Answerer().answerFor("What is 2 plus 2?")
+        assertThat(contents, equalTo("4"))
     }
 
-    @Disabled
+    @Test
+    fun `can pretend to do multiplication`() {
+        val contents = Answerer().answerFor("What is 2 multiplied by 5?")
+        assertThat(contents, equalTo("10"))
+    }
+
     @Test
     fun `can calc max`() {
         val contents = Answerer().answerFor("Which of the following numbers is the largest: 36, 76, 88?")

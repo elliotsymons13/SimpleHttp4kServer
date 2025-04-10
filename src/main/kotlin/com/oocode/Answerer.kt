@@ -30,7 +30,7 @@ class Answerer {
         }
         if (words.contains("multiplied")) {
             // Convert the numbers to floats and add them
-            return (words[2].toInt() * words[4].dropLast(1).toInt()).toString()
+            return (words[2].toInt() * words[5].dropLast(1).toInt()).toString()
         }
 
 //        if (question.contains("largest")){
