@@ -2,6 +2,7 @@ package com.oocode
 
 import kotlin.math.cbrt
 import kotlin.math.floor
+import kotlin.math.pow
 import kotlin.math.sqrt
 
 class Answerer {
@@ -24,7 +25,11 @@ class Answerer {
             // Convert the numbers to floats and add them
             return (words[2].toInt() * words[5].dropLast(1).toInt()).toString()
         }
-
+        println(words)
+        if (words.contains("power")) {
+            // Convert the numbers to floats and add them
+            return (words[2].toDouble()).pow(words[7].dropLast(1).toDouble()).toString()
+        }
 
 
 
