@@ -1,5 +1,9 @@
 package com.oocode
 
+import kotlin.math.cbrt
+import kotlin.math.floor
+import kotlin.math.sqrt
+
 class Answerer {
     fun answerFor(question: String): String {
         val words = question.split(" ")
@@ -40,6 +44,24 @@ class Answerer {
             }
             return count.toString()
             }
+
+
+        if (question.contains("square")){
+            val largest = question.split(":")[1]
+            var numbers = largest.split(",").toMutableList()
+            println(numbers)
+            numbers[6] = numbers[6].dropLast(1)
+            for (item in numbers){
+                val num = item.trim().toInt()
+                val sq = sqrt(num.toDouble())
+                val cb = cbrt(num.toDouble())
+                val sq_f = floor(sq)
+                val cb_f = floor(cb)
+                if ((cb==cb_f) && (sq == sq_f)) {
+                    return num.toString()
+                }
+            }
+        }
 
 //        println(words.filter({it.contains("[0-9]")}).max())
 //        if (question.contains("largest")) {

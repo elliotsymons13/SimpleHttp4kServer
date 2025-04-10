@@ -30,6 +30,12 @@ class AnswererTest {
     }
 
     @Test
+    fun `can calc square and prime`() {
+        val contents = Answerer().answerFor("Which of the following numbers is both a square and a cube: 2742, 64, 676, 3405, 2098, 1728, 4052?")
+        assertThat(contents, equalTo("64"))
+    }
+
+    @Test
     fun `does not know the answer in other cases`() {
         val contents = Answerer().answerFor("What is the answer to life, the universe, and everything?")
         assertThat(contents, equalTo("I don't know"))
