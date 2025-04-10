@@ -20,48 +20,39 @@ class Answerer {
             // Convert the numbers to floats and add them
             return (words[2].toInt() + words[4].dropLast(1).toInt()).toString()
         }
-//        if (words.contains("minus")) {
-//            // Convert the numbers to floats and subtract them
-//            return (words[2].toFloat() - words[4].dropLast(1).toFloat()).toString().dropLast(1)
-//        }
-//        if (words.contains("times")) {
-//            // Convert the numbers to floats and multiply them
-//            return (words[2].toFloat() * words[4].dropLast(1).toFloat()).toString().dropLast(1)
-//        }
-//        if (words.contains("divided")) {
-//            // Convert the numbers to floats and divide them
-//            return (words[2].toFloat() / words[4].dropLast(1).toFloat()).toString().dropLast(1)
-//        }
-
-
-
-//        if (words.contains("+")||words.contains("/")||words.contains("*")||words.contains("-")) {
-//            words = words.filter { it.contains() }
-//        }
-
-//        println(words)
-//        val left = words[2].toFloat()
-//        val right = (words[4].split("")[0]).toFloat()
-//
-//        println(left)
-//        println(right)
-//        if (words.contains("plus")) {
-//            return (left + right).toString()
-////            return (words[2].toFloat() + words[5].toFloat()).toString().split("")[0]
-//        }
-//        if (words.contains("/")) {
-//            return (left / right).toString()
-//        }
-//        if (words.contains("*")) {
-//            return (left * right).toString()
-//        }
-//        if (words.contains("-")) {
-//            return (left - right).toString()
-//        }
-
-        if (question.contains("[0-9]")) {
-            return words.filter({it.contains("[0-9]")}).max()
+        if (words.contains("minus")) {
+            // Convert the numbers to floats and add them
+            return (words[2].toInt() - words[4].dropLast(1).toInt()).toString()
         }
+        if (words.contains("divide")) {
+            // Convert the numbers to floats and add them
+            return (words[2].toInt() - words[4].dropLast(1).toInt()).toString()
+        }
+        if (words.contains("multiplied")) {
+            // Convert the numbers to floats and add them
+            return (words[2].toInt() * words[4].dropLast(1).toInt()).toString()
+        }
+
+//        if (question.contains("largest")){
+//            var count = 0
+//            for (item in words){
+//                if (item[0] == item )){
+//                    if (count < item.toInt()) {
+//                        count = item.toInt()
+//                    }
+//                }
+//            }
+//            return count.toString()
+//            }
+
+//        println(words.filter({it.contains("[0-9]")}).max())
+//        if (question.contains("largest")) {
+//            println(words.filter({it.contains("[0-9]")}).max())
+//            return words.filter({it.contains("[0-9]")}).max()
+//        }
+////
+
+
 
 
 
