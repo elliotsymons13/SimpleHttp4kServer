@@ -17,6 +17,13 @@ class AnswererTest {
         assertThat(contents, equalTo("4.0"))
     }
 
+
+    @Test
+    fun `can calc max`() {
+        val contents = Answerer().answerFor("What is 2 plus 2?")
+        assertThat(contents, equalTo("4"))
+    }
+
     @Test
     fun `does not know the answer in other cases`() {
         val contents = Answerer().answerFor("What is the answer to life, the universe, and everything?")
